@@ -26,3 +26,8 @@
     - Runs when something happens in an app (e.g., new email received).
     - Useful for automating responses to specific events.
 
+# What is SMTP?
+- SMTP stands for Simple Mail Transfer Protocol.
+- It is a protocol used to send emails over the internet.
+- n8n uses SMTP nodes to send emails as part of an automation workflow.
+- Works with Gmail, Outlook, and other email services.
