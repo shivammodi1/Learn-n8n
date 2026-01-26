@@ -20,3 +20,9 @@
 - Data sent in simple formats like JSON or XML.
 - Example: Name, Email, OrderID, PaymentType.
 - n8n reads and uses this data in workflows.
+
+## Securing Webhooks
+- Use secret tokens or keys.
+- Validate incoming requests.
+- Webhook URL is kept private.
+- Only trusted sources can send data.
