@@ -26,3 +26,9 @@
 - Validate incoming requests.
 - Webhook URL is kept private.
 - Only trusted sources can send data.
+
+## Why Webhooks are Important?
+- Core entry point for workflows in automation platforms like n8n.
+- Real-time data transfer.
+- Efficient and fast communication between apps.
+- Reduces server load by avoiding constant polling.
