@@ -17,6 +17,7 @@
 ----
 
 
+---- 
 # My automation works fine with 20 items, but fails with 10000 items. Why?
 - So when we loop over in small numbers of items, everything works find.
 - but dikkat tab aati hain jab humare paas bahut zyada items hote hain, jaise ki 10000.
@@ -25,6 +26,20 @@
     2. **Memory Limits**: Zyada items ko handle karne se memory usage badh sakta hain, jo ki automation tool ke memory limits ko exceed kar sakta hain.
     3. **API Rate Limits**: Agar aap kisi external service ko call kar rahe hain, toh wo service ke rate limits cross ho sakte hain jab aap bahut zyada requests bhejte hain.
     4. **Error Handling**: Kabhi kabhi ek item mein error hone se pura loop fail ho sakta hain, isliye error handling ka dhyan rakhna zaroori hain.
+- Isliye, jab humare paas bahut zyada items hote hain, toh humein unhe chhote batches mein process karna chahiye, jisse ki hum in problems se bach sakein.
+----
 
+----
+# What is Summerize Node?
+- Summersize node collects data from all nodes and combines them into a single output.
+- Covert many items into final item.
+- Used after loops to get counts, total, or final status.
+----
 
-
+----
+# What is Wait Node?
+- Wait node pauses the worflow for a specified time.
+- Useful to avoid hitting API rate limits.
+- Worflow resumes after the wait time.
+- Time can be set in seconds, minutes, or hours.
+----
