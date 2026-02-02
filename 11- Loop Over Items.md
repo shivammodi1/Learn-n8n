@@ -43,3 +43,113 @@
 - Worflow resumes after the wait time.
 - Time can be set in seconds, minutes, or hours.
 ----
+----
+## Worflow
+
+# n8n Workflow – Google Sheets → Loop → Email + Summary
+
+## Workflow Flow
+
+Google Sheets Trigger  
+→ Loop Over Items  
+→ (loop) Send Email → Wait → Loop Over Items  
+→ (done) Summarize → Send Summary Email
+
+---
+
+## 1. Google Sheets Trigger
+
+**Node:** Google Sheets Trigger  
+**Event:** Row Added  
+
+**Config:**
+- Credentials: Google Sheets OAuth
+- Spreadsheet ID: Your Spreadsheet
+- Sheet Name: Sheet1
+- Trigger Event: Row Added
+- Range: Optional (A:D)
+
+---
+
+## 2. Loop Over Items
+
+**Node:** Loop Over Items  
+
+**Purpose:** Iterate over each new row
+
+**Outputs:**
+- `loop` → Per item execution
+- `done` → After all items processed
+
+---
+
+## 3. Send Email (Loop)
+
+**Node:** Send a message  
+**Type:** Gmail  
+
+**Config:**
+- To: `{{$json["email"]}}`
+- Subject: New Sheet Entry
+- Body:
+    ```
+    Hello {{$json["name"]}},
+    
+    A new entry has been added to the Google Sheet:
+    
+    Name: {{$json["name"]}}
+    Email: {{$json["email"]}}
+    Message: {{$json["message"]}}
+    
+    Best regards,
+    Your Team
+    ```
+
+---
+
+## 4. Wait
+
+**Node:** Wait  
+
+**Config:**
+- Mode: Time Interval
+- Duration: 2 seconds
+
+**Connection:**  
+Wait → Loop Over Items
+
+---
+
+## 5. Summarize
+
+**Node:** Summarize  
+
+**Purpose:** Combine all processed rows
+
+**Config:**
+- Mode: Combine Items
+- Fields: name, email, id
+
+---
+
+## 6. Send Summary Email
+
+**Node:** Send a message1  
+**Type:** Gmail  
+
+**Config:**
+- To: admin@example.com
+- Subject: Google Sheets Summary
+- Body:
+`   Summary of new entries:
+    
+    {{$json["summary"]}}
+    
+    Total Entries: {{$json["total"]}}
+    
+    Best regards,
+    Your Team
+    ``` 
+
+---
+
