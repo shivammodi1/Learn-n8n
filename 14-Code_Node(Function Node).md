@@ -20,3 +20,21 @@
 - PArsing means *reading and extracting useful information* from raw data.
 - Take full API JSON -> Extract name, email, amount ony.
 - Convert *complex data* into *simple format* for other nodes.
+
+## What is Transforming Data?
+- Transforming means *changing the structure or format* of data.
+- Examples : 
+    - Change date format from "2024-06-01" to "June 1, 2024".
+    - Convert currency from USD to EUR.
+    - Merge first name and last name into full name.
+- It helps to *make data compatible* with other nodes or systems.
+
+## Common Use Cases of Code Node:
+- *Rename Fields*: Change "first_name" to "firstName".
+- *Add new Fields*: Create "fullName" by combining "firstName" and "lastName".
+- *Remove Unnecessary Fields*: Keep only "name" and "email", remove others.
+- *Format Data*: Change date format, convert currency, etc.
+- *Build Custom JSON Objects*: Create new JSON structure for API requests.
+- "*Loop through Items*: Process each item in an array and modify it.
+- *Conditional Logic*: If amount > 100, add "highValue": true.
+
