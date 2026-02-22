@@ -31,7 +31,9 @@ let cleanEmail = email.toLowerCase();
 
 // Clean amount
 let rawAmount = data.Amount;
-let AmountStr = String(rawAmount).trim().replace(/[^0-9.]/g, "");
+let AmountStr = String(rawAmount)
+  .trim()
+  .replace(/[^0-9.]/g, "");
 const amount = parseFloat(AmountStr) || 0;
 
 // Clean date
@@ -40,9 +42,8 @@ const rawDate = data.Date;
 // Clean message
 const message = data.Message.trim().replace(/\s+/g, " ");
 
-
 // Transformation
-function cap(s){
+function cap(s) {
   return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
 
@@ -61,7 +62,7 @@ return {
   amount,
   date: niceDate,
   message,
-  subject
+  subject,
 };
 ```
 
@@ -85,11 +86,11 @@ Example input:
 
 ```json
 {
- "Full_Name": "   shivam   modi ",
- "Email": " SHIVAM@MAIL.COM ",
- "Amount": " ₹1,500 ",
- "Date": "2026-02-20",
- "Message": "  Need   pricing details "
+  "Full_Name": "   shivam   modi ",
+  "Email": " SHIVAM@MAIL.COM ",
+  "Amount": " ₹1,500 ",
+  "Date": "2026-02-20",
+  "Message": "  Need   pricing details "
 }
 ```
 
@@ -185,7 +186,9 @@ This helps prevent duplicate records.
 
 ```javascript
 let rawAmount = data.Amount;
-let AmountStr = String(rawAmount).trim().replace(/[^0-9.]/g, "");
+let AmountStr = String(rawAmount)
+  .trim()
+  .replace(/[^0-9.]/g, "");
 ```
 
 This removes everything except numbers and decimals.
@@ -239,7 +242,7 @@ Transformation means **changing the cleaned data into a structured and formatted
 # Capitalizing Names
 
 ```javascript
-function cap(s){
+function cap(s) {
   return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
 ```
@@ -289,9 +292,9 @@ Quote Request from Shivam - 1500
 
 Useful for:
 
-* Email notifications
-* CRM automation
-* Sales pipelines
+- Email notifications
+- CRM automation
+- Sales pipelines
 
 ---
 
@@ -305,7 +308,7 @@ return {
   amount,
   date: niceDate,
   message,
-  subject
+  subject,
 };
 ```
 
@@ -313,13 +316,13 @@ Example output:
 
 ```json
 {
- "firstName": "Shivam",
- "lastName": "Modi",
- "email": "shivam@mail.com",
- "amount": 1500,
- "date": "Thu Feb 20 2026",
- "message": "Need pricing details",
- "subject": "Quote Request from Shivam - 1500"
+  "firstName": "Shivam",
+  "lastName": "Modi",
+  "email": "shivam@mail.com",
+  "amount": 1500,
+  "date": "Thu Feb 20 2026",
+  "message": "Need pricing details",
+  "subject": "Quote Request from Shivam - 1500"
 }
 ```
 
@@ -329,11 +332,11 @@ Example output:
 
 This process helps:
 
-* Clean messy user input
-* Prevent database errors
-* Normalize email addresses
-* Convert currency into numbers
-* Prepare data for automation workflows
+- Clean messy user input
+- Prevent database errors
+- Normalize email addresses
+- Convert currency into numbers
+- Prepare data for automation workflows
 
 ---
 
@@ -341,12 +344,12 @@ This process helps:
 
 This script performs:
 
-* Data cleaning
-* Regex processing
-* Name extraction
-* Email normalization
-* Numeric conversion
-* Date formatting
-* Structured output generation
+- Data cleaning
+- Regex processing
+- Name extraction
+- Email normalization
+- Numeric conversion
+- Date formatting
+- Structured output generation
 
 It is a common real-world pattern used in **automation, backend APIs, and data pipelines**.
