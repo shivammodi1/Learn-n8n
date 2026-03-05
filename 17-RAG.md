@@ -70,3 +70,22 @@
 - In RAG system query converted into embedding, becuase similar words have a similar embedding, so it easy to find relevant information.
 - It captures the semantic meaning, not just keywords.
 - Example: *"What is AI?" aur "Define Artificial Intelligence" ke embeddings similar honge, kyunki dono ka meaning same hai.*
+
+
+# What is Vector Database?
+- A specialized database designed to store and search high-dimensional vectors (embeddings).
+- Iski helps se RAG system ko relevant infomation find krna easy hota hai.
+- It uses similarity search algorithms to quickly retrieve relevant data based on query embeddings.
+- Eaxmple: *Netflix ke recommendation system me user ke preferences ke basis par similar movies recommend karna.*
+
+# RAG vs Fine-tuning:
+**RAG**:
+- Uses external knowledge sources.
+- Real-time information access.
+- No need for retraining.
+- More flexible and scalable.
+**Fine-tuning**:
+- Retrains the entire model on new data.
+- Time-consuming and expensive.
+- Best for specific tasks but less flexible for general use.
+- *Many companies use RAG first , fine-tuning only when necessary.*
