@@ -35,3 +35,19 @@
 - **Local models can be less powerful than cloud models:** Some cloud-based models may have more resources and optimizations than what can be run locally.
 - **Requires installation and setup:** Setting up Ollama and downloading models can be more complex than using cloud APIs.
 - **Large models consume RAM and disk space:** Running large models locally can consume a lot of RAM and disk space, which may not be feasible for all users.
+
+
+
+# Download and Install Ollama:
+- **irm https://ollama.com/install.ps1 | iex** (for Windows PowerShell)
+
+## Check Version
+- **ollama --version**
+
+# Now download the model Like llama3 
+- llama3 and all these are the ai model which can generate text, images, code and many more things.
+- llama stands for "Large Language Model Meta AI" and is developed by Meta (formerly Facebook).
+
+- *ollama run llama3* (This will download and run the LLaMA 3 model locally on your machine.)
+- *ollama run mistral* (This will download and run the Mistral model locally on your machine.)
+- *ollama run gemma* (This will download and run the Gemma model locally on your machine.)
