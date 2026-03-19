@@ -18,8 +18,8 @@
 - step 1. Open google cloud console: https://console.cloud.google.com/
 - step 2. search for *APIs & Services* and click on *Enable APIs and Services*.
 - step 3. Search for the API you want to use (e.g., Gmail API, Google Drive API) and enable it.
-- step 4. After this clcik on *OAuth consent screen* from left sidebar.
-- step 5. click on *Get Started* button and give the required details and add **Add URI** copy from n8n.
+- step 4. After this clcik on *Credentials* from left sidebar.
+- step 5. click on **Create Credentials** button and give the required details and add **Add URI** copy from n8n.
 - step 6. After this you will see url-id and secret code. Copy these two.
 - step 7. Now open n8n and create a new workflow.
 - step 8. Add a node for the Google service you want to use (e.g., Gmail, Google Drive).
